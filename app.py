@@ -64,7 +64,7 @@ class EmotionalAnalyzer:
             }"""
 
             response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model=MODEL,
                 messages=[
                     {"role": "system", "content": prompt},
                     {"role": "user", "content": text}
@@ -117,7 +117,7 @@ class MusicRecommender:
             
             REQUISITI FONDAMENTALI:
             - Raccomanda SOLO brani realmente esistenti
-            - Includi ESATTAMENTE 3 brani diversi
+            - Includi ESATTAMENTE 5 brani diversi
             - Scegli brani specifici e rilevanti per lo stato emotivo
             - Varia generi e periodi storici
             - Considera il contesto culturale italiano
